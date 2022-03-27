@@ -24,16 +24,18 @@
         <div>
           <b>Abstract:</b>
             The waveform synthesis methods based on the deep generative model are mainly divided into autoregressive
-            and non-autoregressive, the latter shows better performance but still exists audible actifacts due to the
-            parallel generation. In this paper, we proposed ArGAN which effectively combines autoregressive and non-autoregressive
-            methods and able to fast synthesize speech with improved audio quality. The ArGAN calculation includes two stages:
-            first stage input condition initializes the Shared Receptive Field Memory(SRMF) in the generator,  second stage
-            jointly input predicted speech segment and spectral features to update the current condition, which combines
-            the SRMF autoregressive generated speech on frame rate. In addition, parallel multi-frame synthesis is achieved
-            by added SRMF pre-filling during training and increasing the capacity of current condition information.The experimental
-            results show that ArGAN achieves nearly 12 times faster than real-time on the GPU, 6.5 times faster than real-time
-            on the CPU. Compared with the traditional autoregressive model, the speed is nearly 27 times higher, and the MOS is
-            0.3 higher. Compared with the current state-of-the-art GAN vocoder can synthesize more high-fidelity and natural speech.
+            and non-autoregressive, the latter shows better performance but still exists audible artifacts due to the
+            parallel generation. In this paper, we propose ArGAN which effectively combines autoregressive and non-autoregressive
+            methods and is able to synthesize speech fast with improved audio quality. The ArGAN calculation includes
+            two stages: the first stage, input condition to initialize the Shared Receptive Field Memory(SRFM) in the
+            generator; the second stage, jointly input predicted speech segment and spectral features to update the current
+            condition, which combines the SRFM autoregressive generated speech on frame level. In addition, parallel
+            multi-frame synthesis is achieved by adding SRFM pre-filling during training and increasing the capacity of
+            current condition information. The experimental results show that ArGAN achieves a speed nearly 12 times faster
+            than real-time on the GPU, and 6.5 times faster than real-time on the CPU. Compared with the traditional
+            autoregressive model, the synthesis of ArGAN is nearly 27 times higher, and 0.3 higher than that of the MOS.
+            Furthermore, compared with the current state-of-the-art GAN-based vocoder, the proposed ArGAN can synthesize
+            a more natural speech with high-fidelity.
         </div>
     </div>
 
