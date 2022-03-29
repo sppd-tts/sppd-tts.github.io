@@ -32,8 +32,8 @@
             condition, which combines the SRFM autoregressive generated speech on frame level. In addition, parallel
             multi-frame synthesis is achieved by adding SRFM pre-filling during training and increasing the capacity of
             current condition information. The experimental results show that ArGAN achieves a speed nearly 12 times faster
-            than real-time on the GPU, and 6.5 times faster than real-time on the CPU. Compared with the traditional
-            autoregressive model, the synthesis of ArGAN is nearly 27 times higher, and 0.3 higher than that of the MOS.
+            than real-time on the GPU and 6.5 times faster than real-time on the CPU. Compared with the traditional
+            autoregressive model, the synthesis of ArGAN is nearly 27 times higher and 0.3 higher than that of the MOS.
             Furthermore, compared with the current state-of-the-art GAN-based vocoder, the proposed ArGAN can synthesize
             a more natural speech with high-fidelity.
         </div>
@@ -65,9 +65,9 @@
 
       <div class="p-3 mb-2 ">
         <p>
-              The plots below show the pitch trajectory of different audio file. They are the ground truth audio, and
-              synthesized audio by HiFi-GAN, CARGAN and ArGAN vocoder respectively. We use torchcrepe tools to extract
-              the pitch value.
+            The plots below show the pitch trajectory of the different audio files. They are the ground truth audio
+            and synthesized audio by HiFi-GAN, CARGAN, and ArGAN vocoder respectively. We use torchcrepe tools to extract
+            the pitch value.
         </p>
       </div>
 
@@ -194,10 +194,10 @@
 
       <div class="p-3 mb-2 ">
         <p>
-            The following lists the audio artifacts caused by the model padding process and the conditional entanglement
-            problem formed by the training mechanism. where CARGAN is the model with fewer parameters in the v2 version,
-            training and synthesis process is consistent with the original paper(2048 chunk size used). HiFi-GAN selects 16 frames as the segment
-            length during training, and padding 8 frames before and after synthesizing for overlapping and addition.
+         The following lists the audio artifacts caused by the model padding process and the conditional entanglement
+         problem formed by the training mechanism. where CARGAN is the model with fewer parameters in the v2 version,
+         the training and synthesis process is consistent with the original paper(2048 chunk size used). HiFi-GAN selects
+         16 frames as the segment length during training and padding 8 frames before and after synthesizing for overlapping and addition.
         </p>
       </div>
 
@@ -325,9 +325,9 @@
 
       <div class="p-3 mb-2 ">
         <p>
-            We conducted ablation experiments to verify the effects of Ar Encoder, cross-training, parallel multi-frame synthesis and TRF size.
-            Among them, the parallel multi-frame synthesis takes 4 frames and 100-frame sub-segment for each synthesis.
-            The length of the TRF is 28 frames, compared to 14 frames for the original model.All vocoders are v2 version.
+         We conducted ablation experiments to verify the effects of Ar Encoder, cross-training, parallel multi-frame synthesis,
+         and TRF size. Among them, the parallel multi-frame synthesis takes 4 frames and a 100-frame sub-segment for each synthesis.
+         The length of the TRF is 28 frames, compared to 14 frames for the original model. All vocoders are v2 version.
         </p>
       </div>
 
